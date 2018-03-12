@@ -4,133 +4,130 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>bs</title>
+    <title>管理后台</title>
 
     <link href="lib/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="lib/jquery/jquery-3.3.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="lib/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 
     <!--[if lt IE 9]>
     <script src="lib/bootstrap-3.3.7/js/html5shiv.min.js"></script>
     <script src="lib/bootstrap-3.3.7/js/respond.min.js"></script>
     <![endif]-->
 </head>
+<style>
+    *{
+        margin:0px;
+        padding:0px;
+    }
+    .glyphicon {
+        right: -128px;
+    }
+    .sub_menu a{
+        margin-left:26px;
+    }
+</style>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">海贼王</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a href="#">路飞</a></li>
-                <li><a href="#">索隆</a></li>
-
-                <li class="dropdown" role="presentation">
-                   <a class="dropdown-toggle"   data-toggle="dropdown" role="button" id="dropdownMenu1" aria-haspopup="true" aria-expanded="true">
-                        七武海
-                        <span class="caret"></span>
-                    </a>
-
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href="#">明哥</a></li>
-                        <li><a href="#">大熊</a></li>
-                        <li><a href="#">莫利亚</a></li>
-                        <li><a href="#">蛇姬</a></li>
-                        <li><a href="#">老沙</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">娜美</a></li>
-                <li><a href="#">罗宾</a></li>
-                <li><a href="#">山治</a></li>
-                <li><a href="#">乔巴</a></li>
-                <li><a href="#">布鲁克</a></li>
-                <li><a href="#"></a></li>
-            </ul>
-
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
-
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="./imgs/1.jpg" alt="..." height="200px">
-            <div class="carousel-caption">
-                <h1>海贼王</h1>
-                <p>我是要成为海贼王的男人</p>
+<!--header开始-->
+<div id="header">
+    <!--导航开始-->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse ">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-bar" aria-expanded="true">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">bs管理系统</a>
             </div>
-        </div>
-        <div class="item">
-            <img src="./imgs/2.jpg" alt="...">
-            <div class="carousel-caption">
-                <h1>索隆</h1>
-                <p>世界第一剑豪</p>
-            </div>
-        </div>
 
-        <div class="item">
-            <img src="./imgs/3.jpg" alt="...">
-            <div class="carousel-caption">
-                <h1>初音未来</h1>
-                <p>嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟的</p>
-            </div>
-        </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="top-bar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">首页</a></li>
+                    <li class="dropdown" role="presentation">
+                        <a class="dropdown-toggle"   data-toggle="dropdown" role="button" id="function_dropdown" aria-haspopup="true" aria-expanded="true">
+                            功能
+                            <span class="caret"></span>
+                        </a>
 
-    </div>
+                        <ul class="dropdown-menu " aria-labelledby="function_dropdown">
+                            <li><a href="#">关于</a></li>
+                            <li><a href="#">站点设置</a></li>
+                            <li><a href="#">用户设</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">帮助</a></li>
+                </ul>
 
-    <!-- Controls -->
-    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">上一页</span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">下一页</span>
-    </a>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a>欢迎您:brady</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">设置 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">登出</a></li>
+                            <li><a href="#">密码修改</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <!--导航结束-->
 </div>
+<!--header结束-->
 
-<div class="container summary_container">
-    <div class="row face_img" >
-        <div class="col-md-4">
-            <img src="./imgs/face.jpg" alt="">
-            <h2>海贼王</h2>
-            <p>从来没有一部动画作品能像海贼王这样打动我，一部看似搞笑却能让人时时落泪的作品，一个一心只想成为第一剑客的剑士Zoro, 一个爱钱如命的航海师Nami, </p>
+<div id="container">
+    <div class="row">
+        <!--左边菜单开始-->
+        <div id="menu" class="col-md-2">
+            <div class="list-group">
+                <a class=" list-group-item" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    设置
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                </a>
+                <div class="collapse in" id="collapseExample">
+                    <div class="panel">
+                        <div class="list-group sub_menu" >
+                            <a href="#" class="list-group-item ">
+                                站点设置
+                            </a>
+                            <a href="#" class="list-group-item">关于我</a>
+                            <a href="#" class="list-group-item">密码修改</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="list-group-item">文章管理</a>
+                <a href="#" class="list-group-item">类别管理</a>
+                <a href="#" class="list-group-item">标签管理</a>
+                <a href="#" class="list-group-item">前台</a>
+            </div>
+
+
+
+
         </div>
-        <div class="col-md-4">
-            <img src="./imgs/face.jpg"  alt="">
-            <h2>海贼王</h2>
-            <p>从来没有一部动画作品能像海贼王这样打动我，一部看似搞笑却能让人时时落泪的作品，一个一心只想成为第一剑客的剑士Zoro, 一个爱钱如命的航海师Nami, </p>
+        <!--左边菜单结束-->
+
+        <!--主体内容开始-->
+        <div id="main" class="col-md-10">
+            右边内容
         </div>
-        <div class="col-md-4">
-            <img src="./imgs/face.jpg" alt="">
-            <h2>海贼王</h2>
-            <p>从来没有一部动画作品能像海贼王这样打动我，一部看似搞笑却能让人时时落泪的作品，一个一心只想成为第一剑客的剑士Zoro, 一个爱钱如命的航海师Nami, </p>
-        </div>
+        <!--主体内容结束-->
+
     </div>
-    <hr class="divider">
 </div>
 
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="lib/jquery/jquery-3.3.1.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="lib/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
